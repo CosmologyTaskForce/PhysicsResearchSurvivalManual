@@ -1,0 +1,189 @@
+***************************
+Quantum Mechanics
+***************************
+
+
+Quantum Mechanics Framework
+==============================
+
+
+
+.. math::
+   \newcommand{\ud}[1]{{#1^{\dagger}}}
+   \newcommand{\bra}[1]{\left\langle #1\right|}
+   \newcommand{\ket}[1]{\left| #1\right\rangle}
+   \newcommand\Tr{\mathrm{Tr}}
+   \newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
+   \newcommand\d{\mathrm{d}}
+   \newcommand\I{\mathbb{I}}
+
+
+
+
+What're the most important tricks in QM calculations?
+---------------------------------------------------------
+
+* **Remember what basis we are working in**
+* **Identity**
+
+
+First Three Postulates
+-------------------------
+
+* Physical state is described by kets in a Hilbert space. We need to specify a complete basis {:math:`\ket{i}`å} to do calculations.
+  
+  .. math:: \ket{\psi} = \sum_i \ket{i}\bra{i}\ket{\psi} = \sum_i C_i \ket{i}
+
+* Operators are given by Hermitian operators; A measurement of the variable :math:`\hat \Omega` will yield one of the eigenvalues :math:`\omega` with the probability
+  
+  .. math:: \left|\braket{\omega}{\psi}\right|^2 .
+
+  And the state of the system will change to :math:`\ket{\omega}`.
+* THe state vector obeys the Schrödinger equation,
+  
+  .. math:: i\hbar \frac{\d}{\d t}\ket{\psi(t)} = \hat H \ket{\psi(t)} ,
+
+  where :math:`\hat H` is the Hamiltonian operator.
+
+
+
+-----
+		The logic here is that we first find the way to describe a system, then think about how to find out the information we need from the state vector and also find the evolution of the state vector. Then we need the operator and Schrodinger equation. Finally, we would like to relate the theory to experiments, and it comes the measurement postulate.
+
+		Later we will need the relation between position and momentum, which becomes the fourth postulate.
+ 
+ 
+-----
+
+* How to solve the evolution of a system?
+	We just define a magical operator, propagator
+	$$ \hat U \ket{\psi(t_0)} = \ket{\psi(t)}  .$$
+	This operator just gives us the evolution of state vector! Wait, can we write down the explicit expression of it?
+	
+	Let's find out. The only thing we know about the evolution of a state vector is the third postulate up there.
+	\begin{eqnarray}
+	i\hbar \frac{\d }{\d t}\ket{\psi(t)} &=& \hat H \ket{\psi(t)} \\\\
+	i\hbar \frac{\d }{\d t}\hat U \ket{\psi(t_0)} &=& \hat H \hat U \ket{\psi(t_0)} \\\\
+	i\hbar \frac{\d }{\d t}\hat U &=& \hat H \hat U
+	\end{eqnarray}
+ Looks familiar? This just gives us a exponential result, **if the Hamiltonian is time independent**.
+ $$ \hat U = e^{- i \hat H (t-t_0)/\hbar} $$
+ 
+	**We can prove that this operator is Unitary because $$$\hat H$$$ is Hermitian.**
+ 	
+ 	This is just the abstract representation, we work in some basis, and the most convenient basis is the eigenstates of Hamiltonian, {$$$\ket{\epsilon_i}$$$},
+ 	\begin{eqnarray}
+ 	\hat U \ket{\phi} &=& e^{- i \hat H (t-t_0)/\hbar} \ket{\psi}   \\\\
+ 	\hat U \ket{\phi} &=& \sum_i e^{- i \hat H (t-t_0)/\hbar} \ket{\epsilon_i}\bra{\epsilon_i}  \ket{\psi}  \\\\
+ 	 	\hat U \ket{\phi} &=& \sum_i e^{- i \epsilon_i (t-t_0)/\hbar} \ket{\epsilon_i}\bra{\epsilon_i}  \ket{\psi}
+ 	\end{eqnarray}
+ 	
+ 	And we are going to use $$ \hat U = \sum_i e^{- i \epsilon_i (t-t_0)/\hbar} \ket{\epsilon_i}\bra{\epsilon_i} $$ from now on. (Well, only on discrete eigenvalues ones.)
+ 	
+	**(See that? Identity does the work again.)**
+
+## Position and Momentum Space
+
+
+
+Summarize here.
+
+-----
+* Position
+	1. Define {$$$\ket{x}$$$} basis.
+	2. Define $$$\hat x$$$ operator.
+	3. Find wave function in this basis.
+	4. Find measurement.
+* Evolution
+	1. Need propagator $$$\hat U$$$.
+	2. Propagator needs the solution of Hamiltonian eigensystem.
+	3. (Free particles) Hamiltonian needs the solution of momentum eigensystem.
+* Momentum
+	1. Before we define some arbitrary momentum space, we should check the relation between momentum and position. And it turns out to be related by a commutator.(Postulate IV)
+	2. Use the postulate to momentum operator.
+	3. Find eigenstates.
+	4. ()Calculate the propagator.)
+-----
+
+### Position Space
+
+1. Define $$$\ket{x} $$$ basis.
+	* Orthonormal: $$ \braket{x}{x'}=\delta(x-x')$$
+	* Complete: $$ \int \braket{x'}{x'} \d x' = \mathbb{I}   $$
+2. Define position operator.
+	$$ \hat x \ket{x} = x \ket{x} $$
+	And in {$$$\ket{x}$$$} basis, this operator becomes a function, which is
+	 \begin{eqnarray}
+	 &&\bra{x}\hat x \ket{x'}  \\\\
+	 &=& \left(\bra{x}\hat x\right)\ket{x'} \\\\
+	 &=& x \braket{x}{x'} \\\\
+	 &=& x \delta(x-x')
+	 \end{eqnarray}
+3. Find state vector in $$$ {\ket{x}} $$$ basis.
+	$$ \psi(t,x) = \braket{x}{\psi(t)}  $$
+	* Normalized: $$ \int \left| \psi(t,x) \right|^2 \d x = 1 .$$ And we are interpreting $$$ \left| \psi(t, x)\right|^2 $$$ as probability density.
+4. Calculate probability of a measurement. Taking $$$ \hat x $$$ as an example.
+	\begin{eqnarray}
+	&&\bra{\psi} \hat x \ket{\psi} \\\\
+	&=& \iint \braket{\psi}{x}\bra{x} \hat x \ket{x'} \braket{x'}{\psi}  \d x \d x' \\\\
+	&=& \iint  \psi^ * (t,x) x\delta(x-x') \psi(t,x')  \d x \d x'  \\\\
+	&=& \int \left| \psi(t,x) \right|^2 x \d x
+	\end{eqnarray}								
+	
+### Momentum Space
+
+To find the momentum operator, we need to check the relation between momentum and position before we just randomly define one. Truth is, we have a fourth postulate states the relation between them.
+
+#### Postulate IV
+The commutator of $$$\hat x$$$, $$$\hat p$$$ is
+$$ \left[ \hat x, \hat p \right] = i \hbar $$
+
+Two comments:
+* Why i? Eigenvalue of Anti-Hermitian operator.
+* Why $$$\hbar$$$? Because people define the dimensions of position and momentum differently before they know this commutator. We would like to assign them the same dimension if we already know this relation.
+
+#### Momentum Space
+
+1. Find momentum operator in position basis $$$ {\ket{x}} $$$.
+	$$ \bra{x} \left[ \hat x, \hat p\right] \ket{x'} = i\hbar \delta(x-x') $$
+	And write out the commutator and use the relation of delta function $$$ x\delta'(x) = -\delta(x) $$$, we find out the momentum operator in {$$$\ket{x}$$$} basis,
+	$$ \bra{x}\hat p \ket{x'} = -i\hbar \frac{\d }{\d t} \delta(x-x') $$
+	**Let's talk physics.** What does that operator mean? We need to see what the result is when momentum operator is applied to a state. And remember we would work in {$$$\ket{x}$$$} basis.
+	\begin{eqnarray}
+	&&\bra{x} \hat p \ket{\psi} \\\\
+	&=& \iint \braket{x}{x'} \bra{x'} \hat p \ket{x''}\braket{x''}{\psi} \d x' \d x''  \\\\
+	&=& \int \bra{x}\hat p \ket{x''}\psi(t,x'') \d x'' \\\\
+	&=& \int \left( -i\hbar \frac{\d}{\d x} \delta(x-x') \psi(t,x') \right) \d x' \\\\
+	&=& \int \left( -i\hbar \frac{\d}{\d x'} \delta(x'-x) \psi(t,x') \right) \d x' 
+	\end{eqnarray}
+	
+	**Integrate by parts, we will find the expression.** (I am having a problem finding the right answer.)
+	$$ \bra{x} \hat p \ket{\psi} = - i\hbar \frac{\d }{\d x}\psi(x) .$$
+2. Eigenfunction for momentum.
+	$$ \hat p \ket{p} = p \ket{p} .$$
+	Again, we are going to project it on the {$$$\ket{x}$$$} basis, 
+	$$ \bra{x}\hat p\ket{p} = \bra{x} p \ket{p} ,$$
+	where $$$\braket{x}{p}$$$ is the eigenstates in {$$$\ket{x}$$$} basis, we call it $$$\phi_p(x)$$$.
+	\begin{eqnarray}
+	\bra{x}\hat p\ket{p} &=& p \phi_p(x)    \\\\
+	\int \bra{x}\hat p \ket{x'}\braket{x'}{p}\d x' &=& p \phi_p(x)    \\\\
+	-i\hbar \frac{\d }{\d x} \phi_p(x) &=& p \phi_p(x)
+	\end{eqnarray}
+	The solution is
+	$$ \phi_p(x) = \mathrm{C} e^{i p x/\hbar}  $$
+	This constant C is found by the normalization condition, 
+	$$ \braket{p}{p'}=\int \phi_p^*(x)\phi_{p'}(x)\d x = \delta(p-p') $$
+	**The final results should be**
+	$$ \phi_p(x)=\frac{1}{\sqrt{2\pi \hbar}} \exp{(i p x/\hbar)}  $$
+	
+3. Find the dynamics of free particles in quantum mechanics.
+	**Find the propagator and everything solves.**
+	The hamiltonian for a free particle is 
+	$$ \hat H = \frac{\hat p^2}{2m} .$$
+	We argue here that the eigenvectors of momentum are also the eigenvectors of this hamiltonian. And we can easily guess the eigenvalues are $$$p^2/2m$$$. So the propagator is
+	$$ \hat U = \int e^{-i p^2 t/2m\hbar} \ket{p}\bra{p} \d p $$
+	But that is too abstract to use, we can find the expression in {$$$\ket{x}$$$} basis.
+	\begin{eqnarray}
+	\bra{x}\hat U\ket{x} &=& \int e^{-i p^2 t/2 m \hbar} \braket{x}{p}\braket{p}{x} \d p    \\\\
+	&=& \int e^{-i p^2 t/2 m \hbar} \left| \phi_p \right|^2 \d p    
+	\end{eqnarray}
