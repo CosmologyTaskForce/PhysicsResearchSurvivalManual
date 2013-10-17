@@ -2,5 +2,5 @@
 Classical Mechanics
 ****************************
 
-.. sectnum::
-   :prefix: 3.
+.. .. sectnum::
+      :start: 3
