@@ -3,32 +3,32 @@
     <meta http-equiv="Content-Type"
           content="text/html; charset=utf-8"/>
     
-        <title>5. Classical Mechanics &mdash; Physics Research Survival Manual 1.0.5 documentation</title>
+        <title>4. Statistics &mdash; Physics Research Survival Manual 1.0.5 documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/sphinx-bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
         <script type="text/javascript">
             var DOCUMENTATION_OPTIONS = {
-                URL_ROOT:'./',
+                URL_ROOT:'../',
                 VERSION:'1.0.5',
                 COLLAPSE_INDEX:false,
                 FILE_SUFFIX:'.html',
                 HAS_SOURCE:  true
             };
         </script>
-            <script type="text/javascript" src="_static/jquery.js"></script>
-            <script type="text/javascript" src="_static/underscore.js"></script>
-            <script type="text/javascript" src="_static/doctools.js"></script>
+            <script type="text/javascript" src="../_static/jquery.js"></script>
+            <script type="text/javascript" src="../_static/underscore.js"></script>
+            <script type="text/javascript" src="../_static/doctools.js"></script>
             <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-            <script type="text/javascript" src="_static/bootstrap-dropdown.js"></script>
-        <link rel="top" title="Physics Research Survival Manual 1.0.5 documentation" href="index.html"/>
-            <link rel="next" title="6. Quantum Mechanics" href="QuantumMechanics.html"/>
-            <link rel="prev" title="4. Statistics" href="Statistics/statistics.html"/> 
+            <script type="text/javascript" src="../_static/bootstrap-dropdown.js"></script>
+        <link rel="top" title="Physics Research Survival Manual 1.0.5 documentation" href="../index.html"/>
+            <link rel="next" title="5. Classical Mechanics" href="../ClassicalMechanics.html"/>
+            <link rel="prev" title="3. Mathematics" href="../math.html"/> 
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     
         <!-- analytics -->
@@ -57,24 +57,24 @@
 
     <div class="related">
         <ul class="nav">
-                <li class=""><a class="brand" href="index.html">Physics Research Survival Manual</a></li>
+                <li class=""><a class="brand" href="../index.html">Physics Research Survival Manual</a></li>
                 <li>
-                    <a href="genindex.html"
+                    <a href="../genindex.html"
                        title="General Index" accesskey="I">index</a>
                 </li>
                 <li>
-                    <a href="QuantumMechanics.html"
-                       title="6. Quantum Mechanics" accesskey="N">next</a>
+                    <a href="../ClassicalMechanics.html"
+                       title="5. Classical Mechanics" accesskey="N">next</a>
                 </li>
                 <li>
-                    <a href="Statistics/statistics.html"
-                       title="4. Statistics" accesskey="P">previous</a>
+                    <a href="../math.html"
+                       title="3. Mathematics" accesskey="P">previous</a>
                 </li> 
         </ul>
     </div>
                 <div class="pull-right">
                     
-        <form class="navbar-search" action="search.html"
+        <form class="navbar-search" action="../search.html"
               method="get">
             <input type="text" name="q" placeholder="search"/>
             <input type="hidden" name="check_keywords" value="yes"/>
@@ -129,72 +129,15 @@
         <div class="content row">
                 <div class="span9">
                     
-  <div class="section" id="classical-mechanics">
-<h1>5. Classical Mechanics<a class="headerlink" href="#classical-mechanics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="oscillators">
-<h2>5.1. Oscillators<a class="headerlink" href="#oscillators" title="Permalink to this headline">¶</a></h2>
-<p>In general, the Lagragian for a system with n general coordinates can be</p>
-<div class="math">
-\[L = \frac{1}{2} m _ {jk} \dot q_j \dot q_k - V(q_1, \cdots, q_n)\]</div>
-<p>To write down equation of motion, we need the following terms,</p>
-<div class="math">
-\[\frac{\partial L}{\partial \dot q_j} = m_{jk} \dot q_k
-\frac{\partial L}{\partial q_j} = \frac{1}{2} \frac{\partial m_{kl}}{\partial q_j} \dot q_k \dot q_l - \frac{\partial V}{\partial q_j}\]</div>
-<p>Then equation of motion is</p>
-<div class="math">
-\[m_{jk} \ddot q_{k} + \frac{\partial m_{jk}}{\partial q_l} \dot q_k \dot q_l - \frac{1}{2} \frac{\partial m_{kl}}{\partial q_j} \dot q_k \dot q_l = - \frac{\partial V}{\partial q_j}\]</div>
-<p>Generally, we can&#8217;t solve this system. But there is an interesting limit. The system may have equilibrium points. We can study systems oscillating around equilibrium points.</p>
-<p>At equilibrium, the system can stay steady, i.e., <span class="math">\(\dot q_j^0 = 0\)</span>. This gives us</p>
-<div class="math">
-\[\frac{\partial V}{\partial q_j} = 0 ,\]</div>
-<p>for all j.</p>
-<p>Now for small deviations, we can expand the system around equilibrium points.</p>
-<div class="math">
-\[q_j = q_j^0 + \eta _j\]</div>
-<p>Then</p>
-<div class="math">
-\[T = \frac{1}{2} m_{jk} \vert _ 0 \dot \eta _ j \dot \eta_k \equiv \frac{1}{2} T_{jk} \dot \eta _ j \dot \eta _k\]</div>
-<div class="math">
-\[V = V\vert _0 + \frac{\partial V}{\partial q_j}\vert _ 0 \eta_j + \frac{1}{2} \frac{\partial ^ 2 V}{\partial q_j \partial q_k} \vert _ 0 \eta _ j \eta _ k + \cdots \equiv \frac{1}{2} V_{jk}\eta _ j\eta _ k\]</div>
-<p>So we have the Lagrangian for small oscillations,</p>
-<div class="math">
-\[L = \frac{1}{2} T _ {jk} \dot \eta_j \dot \eta_k - \frac{1}{2} V_{jk}\eta_j \eta_k\]</div>
-<p>Typing indices using LaTeX is so annoying. So we&#8217;ll use matrix notations and Lagragian becomes</p>
-<div class="math">
-\[L = \frac{1}{2} \dot {\tilde \eta} T \dot \eta - \frac{1}{2} \tilde \eta V \eta ,\]</div>
-<p>in which <span class="math">\(T\)</span> and <span class="math">\(V\)</span> matrices are n by n real and symmetric.</p>
-<p>(We need to diagonalize T and V. First question comes to us is:</p>
-<p>** Is is possible to diagonalize both T and V at the same time? **</p>
-<p>We can have a look at the surface <span class="math">\(\tilde p T p = C\)</span>, which is a elliptical surface with coordinates <span class="math">\(p\)</span>.)</p>
-<p>Use the following transformation</p>
-<div class="math">
-\[\xi = T^{1/2}\eta\]</div>
-<p>Then transpose</p>
-<div class="math">
-\[\tilde \xi = \tilde \eta T^{1/2}\]</div>
-<div class="math">
-\[\dot{\tilde \xi} \dot \xi = \dot {\tilde \eta} T \dot \eta\]</div>
-<p>So we have the new Lagragian</p>
-<div class="math">
-\[L = \frac{1}{2} \dot{\tilde \xi} \dot \xi - \frac{1}{2} \tilde \xi T^{-1/2} V T^{-1/2} \xi\]</div>
-<p>Define <span class="math">\(T^{-1/2} V T^{-1/2} \equiv V'\)</span>.</p>
-<p>Next we need to diagonalize V&#8217; by using its eigen vectors.</p>
-<div class="math">
-\[V' b = \lambda b\]</div>
-<p>is equivalent to</p>
-<div class="math">
-\[V a = \lambda T a\]</div>
-<p>with <span class="math">\(b = T^{1/2} a\)</span>. So we have</p>
-<div class="math">
-\[\det(V' - \lambda \mathbf I) = 0\]</div>
-<p>is same as</p>
-<div class="math">
-\[\det(V - \lambda T) = 0\]</div>
-<p>in which <span class="math">\(\lambda\)</span> is the eigen value of this function.</p>
-</div>
-<div class="section" id="hamiltonian-dynamics">
-<h2>5.2. Hamiltonian Dynamics<a class="headerlink" href="#hamiltonian-dynamics" title="Permalink to this headline">¶</a></h2>
-<p>Phase space</p>
+  <div class="section" id="statistics">
+<h1>4. Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="famous-distributions">
+<h2>4.1. Famous Distributions<a class="headerlink" href="#famous-distributions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Binomial distribution</li>
+<li>Poisson Distribution</li>
+<li>Chi-squared Distribution</li>
+</ul>
 </div>
 </div>
 
@@ -205,24 +148,23 @@
                     
         <div class="sphinxsidebar">
             <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">5. Classical Mechanics</a><ul>
-<li><a class="reference internal" href="#oscillators">5.1. Oscillators</a></li>
-<li><a class="reference internal" href="#hamiltonian-dynamics">5.2. Hamiltonian Dynamics</a></li>
+<li><a class="reference internal" href="#">4. Statistics</a><ul>
+<li><a class="reference internal" href="#famous-distributions">4.1. Famous Distributions</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="Statistics/statistics.html"
-                        title="previous chapter">4. Statistics</a></p>
+  <p class="topless"><a href="../math.html"
+                        title="previous chapter">3. Mathematics</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="QuantumMechanics.html"
-                        title="next chapter">6. Quantum Mechanics</a></p>
+  <p class="topless"><a href="../ClassicalMechanics.html"
+                        title="next chapter">5. Classical Mechanics</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/ClassicalMechanics.txt"
+    <li><a href="../_sources/Statistics/statistics.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
             </div>
