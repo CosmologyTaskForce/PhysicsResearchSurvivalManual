@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>General Relativity Revisited &mdash; Research Survival Manual</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/modify.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.0.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.38',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Research Survival Manual" href="../index.html" />
+    <link rel="next" title="Cosmology" href="../Cosmology/cosmoIndex.html" />
+    <link rel="prev" title="Astrophysics" href="../astrophysics.html" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-44466929-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+   
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+ 
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Physics Research Survival Manual</a>
+        <span class="navbar-text navbar-version pull-left"><b>1.38</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Whatever</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fun.html">Fun</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../voc/vocabulary.html">Vocabulary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Basic.html">Basic</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../math.html">Mathematics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../special-functions.html">Special Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../equation-solving.html">Equation Solving</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ClassicalMechanics.html">Classical Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quantum/QuantumMechanics.html">Quantum Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quantum/QuantumMechanics2.html">Quantum Mechanics 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quantum/QuantumMechanics3.html">Quantum Mechanics 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statmech/StatisticalPhysics.html">Statistical Physics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics.html">Electrodynamics</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SpecialRelativity.html">Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GeneralRelativity.html">General Relativity</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../astrophysics.html">Astrophysics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">General Relativity Revisited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Cosmology/cosmoIndex.html">Cosmology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quantum/QuantumOptics.html">Quantum Optics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quantum/susyQuantum.html">Super-Symmetric Quantum Mechanics</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">General Relativity Revisited</a><ul>
+<li><a class="reference internal" href="#hyperthesis">Hyperthesis</a></li>
+<li><a class="reference internal" href="#experiments">Experiments</a><ul>
+<li><a class="reference internal" href="#eotvos-torsion-balance">Eotvos Torsion Balance</a><ul>
+<li><a class="reference internal" href="#how">How</a></li>
+<li><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hughes-drevershiy-experiment-etc">Hughes-Drevershiy Experiment, etc</a></li>
+<li><a class="reference internal" href="#radio-signal">Radio Signal</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#summary-table">Summary Table</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../astrophysics.html" title="Previous Chapter: Astrophysics"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Astrophysics</span>
+    </a>
+  </li>
+  <li>
+    <a href="../Cosmology/cosmoIndex.html" title="Next Chapter: Cosmology"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Cosmology &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/relativity/GeneralRelativityAdv.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="general-relativity-revisited">
+<h1>General Relativity Revisited<a class="headerlink" href="#general-relativity-revisited" title="Permalink to this headline">¶</a></h1>
+<p>This post lists the experiments which are used to test gravity theories
+carried out on the earth.</p>
+<p>The test of gravity theories can be viewed as test of the fundations of
+gravity theories and the the theories themselves, say test of equivalent
+principle and general relativity or f(R) gravity theory. Thus we should
+break down general relativity theory into several stages. Here, we use
+the following table to do so.</p>
+<ul class="simple">
+<li><strong>Physical Fundations: Hyperthesis</strong>:</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="19%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="11%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Theory</th>
+<th class="head">Mach</th>
+<th class="head">WEP</th>
+<th class="head">EEP</th>
+<th class="head">SEP</th>
+<th class="head">GC</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GR</td>
+<td>Partial</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>Mathematical Description</strong>:</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="16%" />
+<col width="15%" />
+<col width="17%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Theory</th>
+<th class="head">Topoplogy</th>
+<th class="head">Manifold</th>
+<th class="head">Connection</th>
+<th class="head">Metric</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GR</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>No torsion</td>
+<td>Non-metricity tensor vanishes</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>Theoretical Implifications</strong>:</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="32%" />
+<col width="26%" />
+<col width="16%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Theory</th>
+<th class="head">Gravitational Waves</th>
+<th class="head">Newtonian Limit</th>
+<th class="head">GR Limit</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GR</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Most items in mathematics are the same in different theories.</p>
+<div class="section" id="hyperthesis">
+<h2>Hyperthesis<a class="headerlink" href="#hyperthesis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>WEP</strong>: weak equivalence principle</li>
+<li><strong>EEP</strong>: Einstein equivalence principle</li>
+<li><strong>SEP</strong>: strong equivalence principle</li>
+<li><strong>GC</strong>, General Covariance</li>
+<li><strong>Mach Principle</strong>: gravity coupled to matter</li>
+</ul>
+</div>
+<div class="section" id="experiments">
+<h2>Experiments<a class="headerlink" href="#experiments" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="eotvos-torsion-balance">
+<h3>Eotvos Torsion Balance<a class="headerlink" href="#eotvos-torsion-balance" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="how">
+<h4>How<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Inertial mass <img class="math" src="../_images/math/91038b6882345ea0f1128be191c895a9ba749308.png" alt="m_I"/></li>
+<li>Gravitational mass <img class="math" src="../_images/math/a3a222810b12038253df51a3ba9b1614e9398e82.png" alt="m_G"/></li>
+</ul>
+<p>In Newtonian system, the acceleration of an object will be \[ a \]</p>
+<p>In a static and uniform gravitation field, the gravity force is \[ G =
+- g m_G r \]</p>
+<p>Thus the acceleration in this case should be \[ a -r g \]</p>
+<p>When <img class="math" src="../_images/math/4e04eaa0e781424d50dd894ad530b6eaaf729f06.png" alt="m_G/m_I"/> is constant, the falling accerelation are the same
+for different objects with same mass. However, if <img class="math" src="../_images/math/4e04eaa0e781424d50dd894ad530b6eaaf729f06.png" alt="m_G/m_I"/> is not
+a constant, say <img class="math" src="../_images/math/5ad77d917979e86f885d605dd67fbc5008c5230e.png" alt="m_G\ne m_I"/>, different objects would fall at
+different acceleration.</p>
+<p>Now if we put two ball with different mass on the Eotvos torsion
+balance, the balance would rotate and we can measure it.</p>
+</div>
+<div class="section" id="results">
+<h4>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h4>
+<p>Detection of
+<img class="math" src="../_images/math/24ec46382b34eb845f52f35c58c44ca26e36b8bf.png" alt="R^k_{0l0}=(1/c^2)\partial^2\Phi/\partial x^k\partial x^l \sim 10^{-32} \text{cm}^{-2}"/>.</p>
+</div>
+</div>
+<div class="section" id="hughes-drevershiy-experiment-etc">
+<h3>Hughes-Drevershiy Experiment, etc<a class="headerlink" href="#hughes-drevershiy-experiment-etc" title="Permalink to this headline">¶</a></h3>
+<p>Anisotropy of gravitation/electromagnetism is not proved in our galaxy.</p>
+</div>
+<div class="section" id="radio-signal">
+<h3>Radio Signal<a class="headerlink" href="#radio-signal" title="Permalink to this headline">¶</a></h3>
+<p>Similar to Eddington and Dyson&#8217;s bending light observation, radio
+signals serve as a more precise experiment to test Einstein&#8217;s theory.
+And these experiments are against scalar tensor theories because scalar
+tensor theories give a smaller bending angle (1.66 second of arc less
+than the observations).</p>
+</div>
+</div>
+<div class="section" id="summary-table">
+<h2>Summary Table<a class="headerlink" href="#summary-table" title="Permalink to this headline">¶</a></h2>
+<p>Tables constructed according to arXiv:1106.2476v3.</p>
+<p>Test of fundamental principles</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="24%" />
+<col width="33%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Experiment</th>
+<th class="head">Results</th>
+<th class="head">Note</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>WEP</td>
+<td>Eotvos torsion balance</td>
+<td><img class="math" src="../_images/math/69edf164c6edb15b062a5b428becae8daf5e972e.png" alt="\eta = (0.3 \pm 1.8) \times 10^{-13}"/></td>
+<td>More precise in space exp. [[^1]a] [[^1b]] [[^1c]]</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>Gravitational redshift of light</td>
+<td>&nbsp;</td>
+<td>[[^2]]</td>
+</tr>
+<tr class="row-even"><td>EEP</td>
+<td>Hughes-Drever Experiment</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'researchsurvivalmanual'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+        <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by
+        <span class="logo-disqus">Disqus</span>
+    </a>
+<hr>
+
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, Lei Ma.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.<br/>
+    </p>
+  </div>
+</footer> 
+
+  </body>
+</html>
