@@ -1,5 +1,3 @@
-# Only for bootstrap theme. comment it when using other themes
-import sphinx_bootstrap_theme
 
 # -*- coding: utf-8 -*-
 #
@@ -15,6 +13,11 @@ import sphinx_bootstrap_theme
 # serve to show the default.
 
 import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), '_themes/'))
+
+# Only for bootstrap theme. comment it when using other themes
+import sphinx_bootstrap_theme
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -26,9 +29,9 @@ sys.path.append(os.path.abspath('exts'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.pngmath', "math_dollar"]
+# extensions = ['sphinx.ext.pngmath', "math_dollar"]
 
-# extensions = ['sphinx.ext.mathjax', "math_dollar"]
+extensions = ['sphinx.ext.mathjax', "math_dollar"]
 
 latex_preamble = r"""
 \usepackage{dsfont}
@@ -41,139 +44,39 @@ latex_preamble = r"""
 \def\degrees{^\circ}
 \def\d{{\rm d}}
 
-\def\sign{\mathop{\mathrm{sign}}}
-\def\L{{\mathcal L}}
-\def\H{{\mathcal H}}
-\def\M{{\mathcal M}}
-\def\matrix{}
-\def\fslash#1{#1 \!\!\!/}
-\def\F{{\bf F}}
-\def\R{{\bf R}}
-\def\J{{\bf J}}
-\def\x{{\bf x}}
-\def\y{{\bf y}}
-\def\h{{\rm h}}
-\def\a{{\rm a}}
-\newcommand{\bfx}{\mbox{\boldmath $x$}}
-\newcommand{\bfy}{\mbox{\boldmath $y$}}
-\newcommand{\bfz}{\mbox{\boldmath $z$}}
-\newcommand{\bfv}{\mbox{\boldmath $v$}}
-\newcommand{\bfu}{\mbox{\boldmath $u$}}
-\newcommand{\bfF}{\mbox{\boldmath $F$}}
-\newcommand{\bfJ}{\mbox{\boldmath $J$}}
-\newcommand{\bfU}{\mbox{\boldmath $U$}}
-\newcommand{\bfY}{\mbox{\boldmath $Y$}}
-\newcommand{\bfR}{\mbox{\boldmath $R$}}
-\newcommand{\bfg}{\mbox{\boldmath $g$}}
-\newcommand{\bfc}{\mbox{\boldmath $c$}}
-\newcommand{\bfxi}{\mbox{\boldmath $\xi$}}
 \newcommand{\bra}[1]{\left\langle #1\right|}
 \newcommand{\ket}[1]{\left| #1\right\rangle}
 \newcommand{\braket}[2]{\langle #1 \mid #2 \rangle}
 \newcommand{\avg}[1]{\left< #1 \right>}
 
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arcCot}
+\DeclareMathOperator{\arccsc}{arcCsc}
+\DeclareMathOperator{\arccosh}{arcCosh}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arcCsch}
+\DeclareMathOperator{\arccoth}{arcCoth}
 
-%\def\back{\!\!\!\!\!\!\!\!\!\!}
-\def\back{}
-\def\col#1#2{\left(\matrix{#1#2}\right)}
-\def\row#1#2{\left(\matrix{#1#2}\right)}
-\def\mat#1{\begin{pmatrix}#1\end{pmatrix}}
-\def\matd#1#2{\left(\matrix{#1\back0\cr0\back#2}\right)}
-\def\p#1#2{{\partial#1\over\partial#2}}
-\def\cg#1#2#3#4#5#6{({#1},\,{#2},\,{#3},\,{#4}\,|\,{#5},\,{#6})}
-\def\half{{\textstyle{1\over2}}}
-\def\jsym#1#2#3#4#5#6{\left\{\matrix{
-{#1}{#2}{#3}
-{#4}{#5}{#6}
-}\right\}}
-\def\diag{\hbox{diag}}
-
-\font\dsrom=dsrom10
-\def\one{\hbox{\dsrom 1}}
-
-\def\res{\mathop{\mathrm{Res}}}
-
-\def\mathnot#1{\text{"$#1$"}}
-
-
-%See Character Table for cmmib10:
-%http://www.math.union.edu/~dpvc/jsmath/download/extra-fonts/cmmib10/cmmib10.html
-\font\mib=cmmib10
-\def\balpha{\hbox{\mib\char"0B}}
-\def\bbeta{\hbox{\mib\char"0C}}
-\def\bgamma{\hbox{\mib\char"0D}}
-\def\bdelta{\hbox{\mib\char"0E}}
-\def\bepsilon{\hbox{\mib\char"0F}}
-\def\bzeta{\hbox{\mib\char"10}}
-\def\boldeta{\hbox{\mib\char"11}}
-\def\btheta{\hbox{\mib\char"12}}
-\def\biota{\hbox{\mib\char"13}}
-\def\bkappa{\hbox{\mib\char"14}}
-\def\blambda{\hbox{\mib\char"15}}
-\def\bmu{\hbox{\mib\char"16}}
-\def\bnu{\hbox{\mib\char"17}}
-\def\bxi{\hbox{\mib\char"18}}
-\def\bpi{\hbox{\mib\char"19}}
-\def\brho{\hbox{\mib\char"1A}}
-\def\bsigma{\hbox{\mib\char"1B}}
-\def\btau{\hbox{\mib\char"1C}}
-\def\bupsilon{\hbox{\mib\char"1D}}
-\def\bphi{\hbox{\mib\char"1E}}
-\def\bchi{\hbox{\mib\char"1F}}
-\def\bpsi{\hbox{\mib\char"20}}
-\def\bomega{\hbox{\mib\char"21}}
-
-\def\bvarepsilon{\hbox{\mib\char"22}}
-\def\bvartheta{\hbox{\mib\char"23}}
-\def\bvarpi{\hbox{\mib\char"24}}
-\def\bvarrho{\hbox{\mib\char"25}}
-\def\bvarphi{\hbox{\mib\char"27}}
-
-%how to use:
-%$$\alpha\balpha$$
-%$$\beta\bbeta$$
-%$$\gamma\bgamma$$
-%$$\delta\bdelta$$
-%$$\epsilon\bepsilon$$
-%$$\zeta\bzeta$$
-%$$\eta\boldeta$$
-%$$\theta\btheta$$
-%$$\iota\biota$$
-%$$\kappa\bkappa$$
-%$$\lambda\blambda$$
-%$$\mu\bmu$$
-%$$\nu\bnu$$
-%$$\xi\bxi$$
-%$$\pi\bpi$$
-%$$\rho\brho$$
-%$$\sigma\bsigma$$
-%$$\tau\btau$$
-%$$\upsilon\bupsilon$$
-%$$\phi\bphi$$
-%$$\chi\bchi$$
-%$$\psi\bpsi$$
-%$$\omega\bomega$$
-%
-%$$\varepsilon\bvarepsilon$$
-%$$\vartheta\bvartheta$$
-%$$\varpi\bvarpi$$
-%$$\varrho\bvarrho$$
-%$$\varphi\bvarphi$$
-
-%small font
-\font\mibsmall=cmmib7
-\def\bsigmasmall{\hbox{\mibsmall\char"1B}}
-
-\def\Tr{\hbox{Tr}\,}
-\def\Arg{\hbox{Arg}}
-\def\atan{\hbox{atan}}
-
-%For augmented matrix
-\newenvironment{amatrix}[1]{\left(\begin{array}{@{}*{#1}{c}|c@{}}}{\end{array}\right)}
 """
 
 pngmath_latex_preamble = latex_preamble
 latex_elements = {"preamble": latex_preamble}
+
+# prolog included in the beginning of every rst file
+rst_prolog = """
+.. role:: strike
+   :class: strike
+
+.. role:: highlight-text
+   :class: highlight-text
+
+.. |nbsp| unicode:: 0xA0
+   :trim:
+"""
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -188,17 +91,17 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Physics Research Survival Manual'
-copyright = u'2014, Lei Ma'
+project = u'Physics Notes'
+copyright = u'2017, Lei Ma.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '1.38'
+version = '0.1.2'
 # The full version, including alpha/beta/rc tags.
-release = '1.38'
+release = '0.1.2'
 
 # The language for content autogenerated by Sphinx. Refer to documentation
 # for a list of supported languages.
@@ -240,6 +143,8 @@ pygments_style = 'sphinx'
 
 # -- Options for HTML output ---------------------------------------------------
 
+numfig = True
+
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
 # html_theme = 'haiku'
@@ -255,6 +160,12 @@ html_theme_options = {
     # Values: "3" (default) or "2" (in quotes)
     'bootstrap_version': "3",
 
+    # Tab name for entire site. (Default: "Site")
+    'navbar_site_name': "Chapters",
+
+    # Tab name for the current pages TOC. (Default: "Page")
+    'navbar_pagenav_name': "Sections",
+
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
     # 'source_link_position': "footer",
@@ -262,20 +173,45 @@ html_theme_options = {
     # Bootswatch (http://bootswatch.com/) theme.
     #
     # Options are nothing with "" (default) or the name of a valid theme
-    # such as "amelia" or "cosmo".
-    'bootswatch_theme': "flatly",
+    # such as "amelia" or "cosmo". Previously "flatly".
+    'bootswatch_theme': "readable",
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    # 'navbar_fixed_top': "false",
+    'navbar_fixed_top': "false",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
     'source_link_position': "footer",
+
+    # HTML navbar class (Default: "navbar") to attach to <div> element.
+    # For black navbar, do "navbar navbar-inverse"
+    # 'navbar_class': "navbar navbar-inverse",
+    'navbar_class': "navbar navbar-inverse",
+
+   # Global TOC depth for "site" navbar tab. (Default: 1)
+    # Switching to -1 shows all levels.
+    'globaltoc_depth': 2,
+
+    # Include hidden TOCs in Site navbar?
+    #
+    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
+    # non-hidden ``toctree`` directives in the same page, or else the build
+    # will break.
+    #
+    # Values: "true" (default) or "false"
+    'globaltoc_includehidden': "true",
+
+   # Render the next and previous page links in navbar. (Default: true)
+    'navbar_sidebarrel': True,
+
+    # Render the current pages TOC in the navbar. (Default: true)
+    'navbar_pagenav': True,
+
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+# html_theme_path = ['_themes/sphinx_bootstrap_theme']
 
 
 # For bootstrap theme:
@@ -287,7 +223,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Research Survival Manual'
+html_title = 'Physics Notes'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -348,7 +284,7 @@ html_static_path = ['_static']
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'statistical-physics'
+htmlhelp_basename = 'physics-notes'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -362,8 +298,8 @@ htmlhelp_basename = 'statistical-physics'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'physics-research-survival-manual.tex', u'Physics Research Survival Manual',
-   u'Cosmology TF', 'manual'),
+  ('index', 'physics-notes.tex', u'Physics Notes',
+   u'Lei Ma', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

@@ -17,31 +17,23 @@
   padding-top: 0;
 }
 
+/*
+ * Reset the logo image dimensions. Sites like RTD can override with bad
+ * results on mobile (mega-huge logo...)
+ *
+ * https://github.com/ryan-roemer/sphinx-bootstrap-theme/issues/142
+ */
+.navbar-brand img {
+  width: auto;
+  height: 100%;
+}
+
 .page-top {
   top: 0px;
 }
 
 
 
-
-
-  body {
-    
-      padding-top: 60px;
-    
-  }
-  .page-top {
-    
-      top: 60px;
-    
-  }
-
-
-
-.navbar-inner {
-  padding-left:  12px !important;
-  padding-right: 12px !important;
-}
 
 
 table {
@@ -67,6 +59,7 @@ a.footnote-reference {
 }
 
 table.footnote td.label {
+  color: inherit;
   font-size: 100%;
   display: block;
   line-height: normal;
@@ -74,6 +67,25 @@ table.footnote td.label {
 }
 
 table.footnote {
+  width: auto;
+  margin-bottom: 0px;
+}
+
+
+/* Fix for Citation Display */
+
+
+
+
+table.citation td.label {
+  color: inherit;
+  font-size: 100%;
+  display: block;
+  line-height: normal;
+  background: inherit;
+}
+
+table.citation {
   width: auto;
   margin-bottom: 0px;
 }

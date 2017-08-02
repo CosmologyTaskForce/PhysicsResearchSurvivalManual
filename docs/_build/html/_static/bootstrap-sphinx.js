@@ -90,23 +90,6 @@
     $(".bs-sidenav > ul > li > a").addClass("nav-header");
 
     
-    // back to top
-    setTimeout(function () {
-      var $sideBar = $(".bs-sidenav");
-
-      $sideBar.affix({
-        offset: {
-          top: function () {
-            var offsetTop      = $sideBar.offset().top;
-            var sideBarMargin  = parseInt($sideBar.css("margin-top"), 10);
-            var navOuterHeight = $("#navbar").outerHeight(true);
-
-            return (this.top = offsetTop - navOuterHeight);
-          }
-        }
-      });
-    }, 0);
-    
 
     // Local TOC.
     patchToc($("ul.localtoc"), 2);
